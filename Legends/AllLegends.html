@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trailblazer Legends – Arkansas Builders</title>
+  <meta name="description" content="Stories and interviews with Arkansas technologists, founders, and educators making an impact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body data-page="legends">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../Home/index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Arkansas Digital Trailblazer</span>
+      </a>
+      <ul class="nav-links">
+        <li><a data-nav="home" href="../Home/index.html">Home</a></li>
+        <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
+        <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
+        <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
+        <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+        <li><a data-nav="about" href="../About/Mission.html">About</a></li>
+      </ul>
+    </nav>
 
+    <header class="hero">
+      <div>
+        <span class="tag">Trailblazer Legends</span>
+        <h1>Arkansas Builders Who Paved the Way</h1>
+        <p>Interviews, oral histories, and essays celebrating the technologists and educators who invested in Arkansas long before it was trendy.</p>
+        <div class="cta">
+          <a class="btn" href="#features">Read Profiles</a>
+          <a class="btn ghost" href="#nominate">Nominate a Legend</a>
+        </div>
+      </div>
+      <div class="card" style="gap:14px">
+        <h3>Why We Document Stories</h3>
+        <p class="muted">We believe seeing someone like you matters. Legends spotlights practical builders who mentored others, shipped civic tools, and created new pathways.</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="features">
+        <h2>Featured Legends</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Monica Harris – The Workday Whisperer</h3>
+            <p class="muted">Scaled Workday across a regional health system and taught dozens of analysts through weekend labs.</p>
+            <a class="btn inline" href="LegendPage.html?legend=monica">Read Interview</a>
+          </article>
+          <article class="card">
+            <h3>Ken Patel – Data for Good</h3>
+            <p class="muted">Turned statewide workforce data into simple dashboards that shaped apprenticeship policy.</p>
+            <a class="btn inline" href="LegendPage.html?legend=ken">Read Interview</a>
+          </article>
+          <article class="card">
+            <h3>Dr. Alicia Rowe – Educator &amp; Mentor</h3>
+            <p class="muted">Built computer science programs in rural districts and mentored first-gen college students.</p>
+            <a class="btn inline" href="LegendPage.html?legend=alicia">Read Interview</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="series">
+        <h2>Series Format</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Long-form Interviews</h3>
+            <p class="muted">45-minute conversations transcribed and edited for clarity. Includes actionable advice and resources.</p>
+          </article>
+          <article class="card">
+            <h3>Artifacts &amp; Archives</h3>
+            <p class="muted">We collect screenshots, slide decks, and demos from each legend so future builders can learn.</p>
+          </article>
+          <article class="card">
+            <h3>Community Premiere</h3>
+            <p class="muted">Each story drops with a live community call, Q&amp;A, and a builder challenge inspired by the legend.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="nominate">
+        <h2>Nominate a Legend</h2>
+        <div class="card">
+          <form action="#">
+            <label class="small">Your Name
+              <input name="name" required placeholder="Your name" />
+            </label>
+            <label class="small">Email
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label class="small">Nominee Name
+              <input name="nominee" required placeholder="Who should we feature?" />
+            </label>
+            <label class="small">Why are they a legend?
+              <textarea name="story" rows="4" placeholder="Share their impact, projects, or mentorship"></textarea>
+            </label>
+            <button class="btn" type="submit">Submit Nomination</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav aria-label="Footer">
+        <a href="../Home/index.html">Home</a>
+        <a href="../Academy/AcademyLanding.html">Academy</a>
+        <a href="../Careers/CareersHome.html">Careers</a>
+        <a href="../Giving/Scholarships.html">Funding</a>
+      </nav>
+      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers LLC</p>
+    </footer>
+  </div>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

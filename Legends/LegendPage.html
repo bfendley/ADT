@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Legend Profile – Arkansas Digital Trailblazer</title>
+  <meta name="description" content="Detailed profile of a Trailblazer Legend." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body data-page="legends">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../Home/index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Arkansas Digital Trailblazer</span>
+      </a>
+      <ul class="nav-links">
+        <li><a data-nav="home" href="../Home/index.html">Home</a></li>
+        <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
+        <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
+        <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
+        <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+        <li><a data-nav="about" href="../About/Mission.html">About</a></li>
+      </ul>
+    </nav>
 
+    <header class="hero">
+      <div>
+        <span class="tag">Legend profile</span>
+        <h1 id="legend-name">Trailblazer Legend</h1>
+        <p id="legend-summary" class="muted">A deeper look at one of the builders shaping Arkansas. Learn how they started, the projects they shipped, and their advice for the next cohort.</p>
+      </div>
+      <div class="card" style="gap:16px">
+        <h3>Highlights</h3>
+        <ul class="muted" style="margin:0 0 0 18px; display:grid; gap:6px" id="legend-highlights">
+          <li>Key projects and accomplishments.</li>
+          <li>Community impact across Arkansas.</li>
+          <li>Advice for emerging builders.</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="story">
+        <h2>Origin Story</h2>
+        <p class="muted" id="legend-story">This space is ready for a long-form interview. Share their background, the moment they fell in love with building, and the early obstacles they overcame.</p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects &amp; Impact</h2>
+        <div class="grid-2" id="legend-projects">
+          <article class="card">
+            <h3>Signature Project</h3>
+            <p class="muted">Describe the flagship project and why it mattered.</p>
+          </article>
+          <article class="card">
+            <h3>Community Ripple Effects</h3>
+            <p class="muted">Highlight who benefited and how the legend shared their knowledge.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="advice">
+        <h2>Advice to Trailblazers</h2>
+        <div class="card">
+          <p class="muted" id="legend-advice">Capture their best advice for Arkansans starting out in technology, data, or entrepreneurship.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav aria-label="Footer">
+        <a href="../Legends/AllLegends.html">All Legends</a>
+        <a href="../Home/index.html">Home</a>
+        <a href="../Academy/AcademyLanding.html">Academy</a>
+        <a href="../Giving/Scholarships.html">Funding</a>
+      </nav>
+      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers LLC</p>
+    </footer>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const legend = params.get('legend');
+    const profiles = {
+      monica: {
+        name: 'Monica Harris – The Workday Whisperer',
+        summary: 'Scaled Workday integrations across healthcare operations and coached dozens of analysts through weekend labs.',
+        highlights: [
+          'Introduced lightweight logging standards adopted by three hospitals.',
+          'Launched a Saturday lab that trained 40+ analysts in two years.',
+          'Mentors scholarship recipients exploring Workday careers.'
+        ],
+        story: 'Monica started as an HRIS analyst in Pine Bluff before Workday was a household name. When her hospital adopted Workday, she dove headfirst into Studio and Extend, documenting everything along the way. Her curiosity turned into a community asset.',
+        projects: [
+          { title: 'Clinical Staffing Dashboard', description: 'Integrated staffing data with Workday to forecast critical coverage gaps and reduce overtime by 12%.' },
+          { title: 'Extend Knowledge Base', description: 'Published tutorials, Looms, and templates so new analysts could ship extend pages in weeks instead of months.' }
+        ],
+        advice: 'Start with the messy problem in front of you. Ship a scrappy solution, share how you did it, and keep improving it with community feedback.'
+      },
+      ken: {
+        name: 'Ken Patel – Data for Good',
+        summary: 'Translates messy public datasets into clear dashboards that help leaders make faster decisions.',
+        highlights: [
+          'Built the Arkansas Workforce Pulse dashboard used by 12 counties.',
+          'Mentors students on regression, forecasting, and communicating insights.',
+          'Co-founded the Community Data Co-op with Trailblazer alumni.'
+        ],
+        story: 'Ken moved to Arkansas for college, stayed for the community, and now leads data collaborations statewide. He believes decisions are better when builders share context openly.',
+        projects: [
+          { title: 'Workforce Pulse Dashboard', description: 'Aggregated job postings, completions, and wage data for monthly county briefings.' },
+          { title: 'Trailblazer Data Residency', description: 'Paired student analysts with non-profits for 6-week data sprints.' }
+        ],
+        advice: 'Publish your analysis even if it feels unfinished. The feedback loop is what makes the work better and keeps the community learning together.'
+      },
+      alicia: {
+        name: 'Dr. Alicia Rowe – Educator & Mentor',
+        summary: 'Equips first-generation students with technical confidence and pathways into apprenticeships.',
+        highlights: [
+          'Launched computer science programs in four rural districts.',
+          'Runs annual hack days that pair students with local founders.',
+          'Guided 25+ first-gen students into tech apprenticeships.'
+        ],
+        story: 'Dr. Rowe started teaching in a district with no CS offerings. She wrote the curriculum from scratch, partnered with local companies, and never stopped inviting students to build in public.',
+        projects: [
+          { title: 'Rural CS Launchpad', description: 'A curriculum and toolkit for rural schools to stand up CS classes in one semester.' },
+          { title: 'Arkansas Builder Nights', description: 'Quarterly meetups where students demo projects to mentors and employers.' }
+        ],
+        advice: 'Create brave spaces where questions are celebrated. Pair students with a real audience and they’ll surprise you every time.'
+      }
+    };
+
+    if (legend && profiles[legend]) {
+      const profile = profiles[legend];
+      document.getElementById('legend-name').textContent = profile.name;
+      document.getElementById('legend-summary').textContent = profile.summary;
+      const highlights = document.getElementById('legend-highlights');
+      highlights.innerHTML = '';
+      profile.highlights.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        highlights.appendChild(li);
+      });
+      document.getElementById('legend-story').textContent = profile.story;
+      const projects = document.getElementById('legend-projects');
+      projects.innerHTML = '';
+      profile.projects.forEach((proj) => {
+        const article = document.createElement('article');
+        article.className = 'card';
+        const h3 = document.createElement('h3');
+        h3.textContent = proj.title;
+        const p = document.createElement('p');
+        p.className = 'muted';
+        p.textContent = proj.description;
+        article.append(h3, p);
+        projects.appendChild(article);
+      });
+      document.getElementById('legend-advice').textContent = profile.advice;
+    }
+  </script>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

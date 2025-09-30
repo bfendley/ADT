@@ -1,1 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Training Detail – Trailblazer Academy</title>
+  <meta name="description" content="Deep dive into a Trailblazer Academy course." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body data-page="academy">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../Home/index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Arkansas Digital Trailblazer</span>
+      </a>
+      <ul class="nav-links">
+        <li><a data-nav="home" href="../Home/index.html">Home</a></li>
+        <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
+        <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
+        <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
+        <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+        <li><a data-nav="about" href="../About/Mission.html">About</a></li>
+      </ul>
+    </nav>
 
+    <header class="hero">
+      <div>
+        <span class="tag" id="course-tag">Trailblazer Academy</span>
+        <h1 id="course-title">Course Title</h1>
+        <p id="course-summary" class="muted">This page highlights a Trailblazer Academy module. Explore what you'll build, the format, and how to enroll.</p>
+        <div class="cta">
+          <a class="btn" href="#curriculum">See Curriculum</a>
+          <a class="btn ghost" href="../Giving/Scholarships.html#aid">Request Aid</a>
+        </div>
+      </div>
+      <div class="card" style="gap:12px">
+        <h3>Quick Facts</h3>
+        <div class="meta" id="course-meta">
+          <span><strong>Format:</strong> Self-paced</span>
+          <span><strong>Duration:</strong> 2 hours</span>
+          <span><strong>Level:</strong> Beginner</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="curriculum">
+        <h2>Curriculum</h2>
+        <div class="table-list" id="course-lessons">
+          <div class="row">
+            <strong>Module 1</strong>
+            <p class="muted">Course introduction and setup checklist.</p>
+          </div>
+          <div class="row">
+            <strong>Module 2</strong>
+            <p class="muted">Hands-on build with guided instructions.</p>
+          </div>
+          <div class="row">
+            <strong>Module 3</strong>
+            <p class="muted">Share your deliverable and get feedback.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="outcomes">
+        <h2>What You'll Ship</h2>
+        <div class="grid-3" id="course-outcomes">
+          <article class="card">
+            <h3>Project Artifact</h3>
+            <p class="muted">A completed build you can show in your portfolio or to your team.</p>
+          </article>
+          <article class="card">
+            <h3>Documentation</h3>
+            <p class="muted">A README-style summary with setup steps and metrics.</p>
+          </article>
+          <article class="card">
+            <h3>Reflection</h3>
+            <p class="muted">A short Loom or write-up sharing what you learned and what's next.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="mentors">
+        <h2>Mentor Support</h2>
+        <div class="grid-2" id="course-mentors">
+          <article class="card">
+            <h3>Office Hours</h3>
+            <p class="muted">Weekly sessions to review progress, unblock issues, and pair program.</p>
+          </article>
+          <article class="card">
+            <h3>Async Reviews</h3>
+            <p class="muted">Submit Looms or GitHub links for feedback within two business days.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="enroll">
+        <h2>Enroll</h2>
+        <div class="card">
+          <p class="muted" id="course-enroll">Ready to join? Fill out the short form and we’ll send next steps.</p>
+          <form action="#">
+            <label class="small">Name
+              <input name="name" required placeholder="Your name" />
+            </label>
+            <label class="small">Email
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label class="small">Tell us about your goals
+              <textarea name="goals" rows="3" placeholder="What do you want to get out of this course?"></textarea>
+            </label>
+            <button class="btn" type="submit">Reserve Your Seat</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav aria-label="Footer">
+        <a href="../Academy/AcademyLanding.html">Back to Catalog</a>
+        <a href="../Home/index.html">Home</a>
+        <a href="../Giving/Scholarships.html">Funding</a>
+      </nav>
+      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers LLC</p>
+    </footer>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const course = params.get('course');
+    const courses = {
+      'data-projects': {
+        title: 'Data Projects 101',
+        summary: 'From messy CSV to a polished brief. Learn cleaning, charts, and how to communicate decisions.',
+        tag: 'Free • Data',
+        meta: [
+          { label: 'Format', value: 'Self-paced with mentor review' },
+          { label: 'Duration', value: '2–3 hours' },
+          { label: 'Level', value: 'Beginner' }
+        ],
+        lessons: [
+          ['Module 1', 'Scoping your question & defining success metrics'],
+          ['Module 2', 'Cleaning data with Python or spreadsheets'],
+          ['Module 3', 'Charts & storytelling in a one-page brief']
+        ],
+        outcomes: [
+          ['Case Study', 'A concise PDF or Notion page explaining your analysis'],
+          ['Dashboard Snapshot', 'Simple charts that answer the question at a glance'],
+          ['Community Share', 'Post your insights and invite feedback from peers']
+        ],
+        mentors: [
+          ['Office Hours', 'Weekly drop-in hours with Trailblazer data mentors'],
+          ['Async Reviews', 'Submit Looms for rapid feedback within 48 hours']
+        ],
+        enroll: 'Complete the form and we’ll send the self-paced kit plus mentor office hour schedule.'
+      },
+      automation: {
+        title: 'APIs & Automation Quickstart',
+        summary: 'Build a scheduled automation that pulls data, transforms it, and ships an update email.',
+        tag: 'Free • Automation',
+        meta: [
+          { label: 'Format', value: 'Self-paced + optional live lab' },
+          { label: 'Duration', value: '2 hours' },
+          { label: 'Level', value: 'Beginner' }
+        ],
+        lessons: [
+          ['Module 1', 'API fundamentals & authentication'],
+          ['Module 2', 'Transforming data and handling errors'],
+          ['Module 3', 'Scheduling and shipping your update email']
+        ],
+        outcomes: [
+          ['Automation Script', 'A reusable script with environment variables & logging'],
+          ['Runbook', 'Step-by-step doc so others can maintain the automation'],
+          ['Demo Loom', 'Show the before/after impact to stakeholders']
+        ],
+        mentors: [
+          ['Office Hours', 'Live pairing sessions to debug issues'],
+          ['Community Channel', 'Async support in the Trailblazer Slack']
+        ],
+        enroll: 'Reserve a seat and we’ll share the GitHub repo plus onboarding call details.'
+      },
+      'workday-integrations': {
+        title: 'Workday Integrations Lab',
+        summary: 'Hands-on Studio, EIB, and RAAS builds with logging, retries, and code reviews.',
+        tag: 'Paid • Workday',
+        meta: [
+          { label: 'Format', value: 'Live cohort' },
+          { label: 'Duration', value: '4 weeks' },
+          { label: 'Level', value: 'Intermediate' }
+        ],
+        lessons: [
+          ['Week 1', 'Integration design & error handling patterns'],
+          ['Week 2', 'Studio builds with logging middleware'],
+          ['Week 3', 'RAAS + downstream automation'],
+          ['Week 4', 'Code reviews & go-live playbook']
+        ],
+        outcomes: [
+          ['Studio Project', 'Deploy a fully instrumented integration'],
+          ['Logging Toolkit', 'Plug-and-play logging and alerting scripts'],
+          ['Go-Live Plan', 'Checklist for deployment, monitoring, and handoff']
+        ],
+        mentors: [
+          ['Office Hours', 'Weekly pair programming with Workday experts'],
+          ['Demo Day', 'Final presentation with feedback from partner teams']
+        ],
+        enroll: 'Complete the form and we’ll schedule a short intake call before sending payment details.'
+      },
+      extend: {
+        title: 'Workday Extend Builder Lab',
+        summary: 'Design Extend pages with conditional logic, attachments, and dashboards.',
+        tag: 'Paid • Workday',
+        meta: [
+          { label: 'Format', value: 'Live workshop' },
+          { label: 'Duration', value: '2 sessions' },
+          { label: 'Level', value: 'Intermediate' }
+        ],
+        lessons: [
+          ['Session 1', 'Page architecture, conditional visibility, validations'],
+          ['Session 2', 'Attachments, dashboards, and launch checklist']
+        ],
+        outcomes: [
+          ['Extend Page', 'Ship a working Extend page with dynamic sections'],
+          ['Launch Checklist', 'Security, testing, and rollout plan'],
+          ['UX Notes', 'Document user flows, accessibility, and next iterations']
+        ],
+        mentors: [
+          ['Design Reviews', 'Async Loom critiques of page flows'],
+          ['Launch Support', 'One-on-one help during go-live week']
+        ],
+        enroll: 'We’ll follow up with workshop dates and prep work after you submit the form.'
+      },
+      story: {
+        title: 'Portfolio & Public Writing',
+        summary: 'Clarify your narrative, document what you built, and publish a public update.',
+        tag: 'Free • Web',
+        meta: [
+          { label: 'Format', value: 'Self-paced challenge' },
+          { label: 'Duration', value: '1 hour' },
+          { label: 'Level', value: 'All levels' }
+        ],
+        lessons: [
+          ['Lesson 1', 'Defining your audience & goal'],
+          ['Lesson 2', 'Structuring your project story'],
+          ['Lesson 3', 'Publishing & sharing the update']
+        ],
+        outcomes: [
+          ['Portfolio Entry', 'A polished project write-up for your site or LinkedIn'],
+          ['Social Post', 'Short update to celebrate the launch and invite feedback'],
+          ['Follow-up Plan', 'Next steps to keep momentum going']
+        ],
+        mentors: [
+          ['Copy Clinic', 'Async edits on your draft'],
+          ['Community Thread', 'Celebrate wins with the alumni network']
+        ],
+        enroll: 'Submit the form and we’ll send templates plus accountability check-ins.'
+      },
+      stats: {
+        title: 'Applied Stats for Builders',
+        summary: 'Confidence intervals, regression, and causal thinking without fluff.',
+        tag: 'Paid • Data',
+        meta: [
+          { label: 'Format', value: 'Hybrid (self-paced + live labs)' },
+          { label: 'Duration', value: '3 weeks' },
+          { label: 'Level', value: 'Intermediate' }
+        ],
+        lessons: [
+          ['Week 1', 'Confidence intervals & communicating uncertainty'],
+          ['Week 2', 'Regression & forecasting'],
+          ['Week 3', 'Decision briefs & stakeholder communication']
+        ],
+        outcomes: [
+          ['Analysis Notebook', 'Documented code with clear commentary'],
+          ['Decision Brief', 'One-page recommendation with visuals'],
+          ['Presentation', 'Short Loom or deck to share insights with stakeholders']
+        ],
+        mentors: [
+          ['Stats Hotline', 'Slack channel for quick questions'],
+          ['Live Labs', 'Hands-on sessions to walk through real datasets']
+        ],
+        enroll: 'Apply for the next cohort and we’ll follow up with schedule options and funding support.'
+      }
+    };
+
+    if (course && courses[course]) {
+      const data = courses[course];
+      document.getElementById('course-title').textContent = data.title;
+      document.getElementById('course-summary').textContent = data.summary;
+      document.getElementById('course-tag').textContent = data.tag;
+      const meta = document.getElementById('course-meta');
+      meta.innerHTML = '';
+      data.meta.forEach((entry) => {
+        const span = document.createElement('span');
+        span.innerHTML = `<strong>${entry.label}:</strong> ${entry.value}`;
+        meta.appendChild(span);
+      });
+      const lessons = document.getElementById('course-lessons');
+      lessons.innerHTML = '';
+      data.lessons.forEach(([title, description]) => {
+        const row = document.createElement('div');
+        row.className = 'row';
+        const strong = document.createElement('strong');
+        strong.textContent = title;
+        const p = document.createElement('p');
+        p.className = 'muted';
+        p.textContent = description;
+        row.append(strong, p);
+        lessons.appendChild(row);
+      });
+      const outcomes = document.getElementById('course-outcomes');
+      outcomes.innerHTML = '';
+      data.outcomes.forEach(([title, description]) => {
+        const article = document.createElement('article');
+        article.className = 'card';
+        const h3 = document.createElement('h3');
+        h3.textContent = title;
+        const p = document.createElement('p');
+        p.className = 'muted';
+        p.textContent = description;
+        article.append(h3, p);
+        outcomes.appendChild(article);
+      });
+      const mentors = document.getElementById('course-mentors');
+      mentors.innerHTML = '';
+      data.mentors.forEach(([title, description]) => {
+        const article = document.createElement('article');
+        article.className = 'card';
+        const h3 = document.createElement('h3');
+        h3.textContent = title;
+        const p = document.createElement('p');
+        p.className = 'muted';
+        p.textContent = description;
+        article.append(h3, p);
+        mentors.appendChild(article);
+      });
+      document.getElementById('course-enroll').textContent = data.enroll;
+    }
+  </script>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
