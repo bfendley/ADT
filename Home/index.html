@@ -3,101 +3,165 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arkansas Digital Trailblazer – Academy & Scholarship</title>
-  <meta name="description" content="Arkansas Digital Trailblazer: scholarships, startup funding, free & paid academy trainings, careers, open‑source projects, and Arkansas legends." />
+  <title>Arkansas Digital Trailblazer – Scholarships, Academy & Community</title>
+  <meta name="description" content="Arkansas Digital Trailblazers funds builders with scholarships, trainings, and a statewide peer network." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../assets/css/site.css" />
 </head>
-<body>
+<body data-page="home">
   <div class="wrap">
-    <nav class="nav">
-      <div class="brand"><div class="logo" aria-hidden="true"></div><span>Arkansas Digital Trailblazer</span></div>
-      <div style="display:flex;gap:16px;flex-wrap:wrap">
-        <a class="small" href="#about">Scholarships & Start Up Funding</a>
-        <a class="small" href="#careers">Careers</a>
-        <a class="small" href="#academy">Academy</a>
-        <a class="small" href="#projects">Open Source</a>
-        <a class="small" href="#legends">Legends</a>
-        <a class="small" href="#faq">FAQ</a>
-      </div>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../Home/index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Arkansas Digital Trailblazer</span>
+      </a>
+      <ul class="nav-links">
+        <li><a data-nav="home" href="../Home/index.html">Home</a></li>
+        <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
+        <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
+        <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
+        <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+        <li><a data-nav="about" href="../About/Mission.html">About</a></li>
+      </ul>
     </nav>
 
     <header class="hero">
       <div>
-        <span class="tag">Scholarship • Academy • Community</span>
-        <h1>Arkansas Digital Trailblazer</h1>
-        <p>Free & paid trainings, scholarships, and a builder community in Arkansas. Learn practical skills, ship projects, and open doors.</p>
+        <span class="tag">Scholarships • Training • Community</span>
+        <h1>Build Arkansas tech with people who ship.</h1>
+        <p>We invest in Arkansas builders with practical coaching, real checks, and a crew that shows up when it is time to ship.</p>
         <div class="cta">
-          <a class="btn" href="#academy">Browse Trainings</a>
-          <a class="btn ghost" href="#about">Apply for Funding</a>
-        </div>
-        <div class="kpi" style="margin-top:16px">
-          <div class="notice">Next scholarship window: <strong>Opens Jan 15</strong> • <span class="muted">Closes Mar 15</span></div>
+          <a class="btn" href="../Academy/AcademyLanding.html">Explore the Academy</a>
+          <a class="cta-link" href="../Giving/Scholarships.html">See funding options</a>
         </div>
       </div>
-      <div class="illus card" role="img" aria-label="abstract light illustration"></div>
+      <aside class="hero-card" aria-label="Program highlights">
+        <h3>Why builders join</h3>
+        <ul>
+          <li><strong>120+</strong><span class="muted">projects funded across Arkansas</span></li>
+          <li><strong>48</strong><span class="muted">mentors on call for reviews and feedback</span></li>
+          <li><strong>92%</strong><span class="muted">ship a public release within 60 days</span></li>
+        </ul>
+      </aside>
     </header>
 
-    <section id="about">
-      <h2>Scholarships & Start Up Funding</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Trailblazer Scholarship</h3>
-          <p class="muted">$1,000 award for Arkansans building in code, data, or systems. Emphasis on initiative and community impact.</p>
-          <ul>
-            <li>Open to HS seniors, college, and non‑traditional learners</li>
-            <li>Short project story + links (GitHub, demo, screenshots)</li>
-            <li>Mentorship & portfolio support included</li>
-          </ul>
-          <div class="cta" style="margin-top:12px">
-            <a class="btn" href="#apply">Apply</a>
-            <a class="btn ghost" href="#faq">FAQ</a>
+    <main>
+      <section aria-labelledby="start-here">
+        <h2 id="start-here">Start with what you need</h2>
+        <p>Pick the path that helps you move this month. Each program keeps the paperwork light so you can stay focused on the build.</p>
+        <div class="feature-grid">
+          <a class="card feature-card" href="../Academy/AcademyLanding.html">
+            <h3>Trailblazer Academy</h3>
+            <p>Hands-on workshops and self-paced labs that end with a demo you can link in your portfolio.</p>
+            <span class="link-label">Browse workshops</span>
+          </a>
+          <a class="card feature-card" href="../Giving/Scholarships.html">
+            <h3>Funding &amp; Support</h3>
+            <p>Scholarships and micro-grants for Arkansans building tools for their community or career.</p>
+            <span class="link-label">Review requirements</span>
+          </a>
+          <a class="card feature-card" href="../OpenSource/Projects.html">
+            <h3>Community &amp; Open Source</h3>
+            <p>Join a contributor crew, pick up a good first issue, or lead a weekend sprint in your town.</p>
+            <span class="link-label">Find collaborators</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="impact-band" aria-labelledby="impact">
+        <h2 id="impact">Measured impact</h2>
+        <div class="impact-stats">
+          <div class="impact-stat">
+            <strong>1,800 hrs</strong>
+            <span>of pro-bono mentorship logged last year</span>
+          </div>
+          <div class="impact-stat">
+            <strong>$142K</strong>
+            <span>in scholarships and micro-grants delivered statewide</span>
+          </div>
+          <div class="impact-stat">
+            <strong>68 towns</strong>
+            <span>represented across recent cohorts and events</span>
           </div>
         </div>
-        <div class="card">
-          <h3>Micro‑Grants for Startups</h3>
-          <p class="muted">Tiny checks for Arkansas builders to validate ideas: cover cloud credits, domain names, or prototyping costs.</p>
-          <ul>
-            <li>$250–$750 micro‑grants</li>
-            <li>Rolling consideration, quarterly awards</li>
-            <li>Must share a short project update post</li>
-          </ul>
-          <div class="cta" style="margin-top:12px">
-            <a class="btn" href="#apply">Request Funding</a>
-            <a class="btn ghost" href="#projects">See Starter Ideas</a>
-          </div>
+      </section>
+
+      <section aria-labelledby="quote" role="region">
+        <div class="quote-card">
+          <h2 id="quote" class="sr-only">Social proof</h2>
+          <blockquote>
+            “Trailblazers helped our small team get a product in front of the city council in weeks, not months. The mentors stuck around until launch.”
+          </blockquote>
+          <cite>Danielle Ruiz · Operations Lead, Bentonville Works</cite>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section id="newsletter" class="grid-2">
+        <div>
+          <h2>Stay in the Loop</h2>
+          <p class="muted">Monthly updates on new trainings, scholarship windows, and upcoming community events.</p>
+        </div>
+        <div class="card">
+          <form action="#">
+            <label class="small">Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <button class="btn" type="submit">Join the Newsletter</button>
+            <p class="small muted">We send one concise update each month. No spam, unsubscribe anytime.</p>
+          </form>
+        </div>
+      </section>
 
-    <section id="partners" class="card">
-      <h2>Official Partners</h2>
-      <p class="muted"><a href="https://childdevelopmentassociatecertificate.com/" target="_blank" rel="noopener">Training Innovations</a></p>
-    </section>
-
-    <section id="faq" class="grid-2">
-      <div>
-        <h2>FAQ</h2>
-        <details class="card"><summary><strong>Who can apply?</strong></summary><p>Arkansas residents or students at Arkansas schools pursuing technology, data, or digital innovation. Non‑traditional learners are welcome.</p></details>
-        <details class="card"><summary><strong>Do you offer financial aid for paid courses?</strong></summary><p>Yes — use the scholarship & micro‑grant application to request an Academy fee waiver.</p></details>
-        <details class="card"><summary><strong>Do I need perfect grades?</strong></summary><p>No. We evaluate curiosity, effort, and building. GPA is one signal, not the whole story.</p></details>
-      </div>
-
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p class="muted">Questions, partnerships, or press: <a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a></p>
-    </section>
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p class="muted">Partnerships, press, or custom training requests: <a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a></p>
+      </section>
+    </main>
 
     <footer class="footer">
-      <p class="small">Made in Arkansas • © <span id="year"></span> Arkansas Digital Trailblazers LLC</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-inline" href="../Home/index.html">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Arkansas Digital Trailblazer</span>
+          </a>
+          <p class="small">Scholarships, mentorship, and open source support for Arkansas technologists.</p>
+        </div>
+        <div>
+          <h4>Programs</h4>
+          <ul class="footer-links">
+            <li><a href="../Academy/AcademyLanding.html">Academy</a></li>
+            <li><a href="../Giving/Scholarships.html">Funding</a></li>
+            <li><a href="../Careers/CareersHome.html">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="../OpenSource/Projects.html">Open Source</a></li>
+            <li><a href="../Legends/AllLegends.html">Trailblazer Legends</a></li>
+            <li><a href="../About/Faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Stay in touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a></li>
+            <li><a href="https://www.linkedin.com/company/arkansas-digital-trailblazers">LinkedIn</a></li>
+            <li><a href="https://github.com/arkansas-digital-trailblazers">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-note">
+        <span>Made in Arkansas</span>
+        <span>© <span class="js-year"></span> Arkansas Digital Trailblazers</span>
+      </div>
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="../assets/js/site.js"></script>
 </body>
 </html>

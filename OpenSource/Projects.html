@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Open Source Projects – Arkansas Digital Trailblazer</title>
+  <meta name="description" content="Explore open source projects, starter ideas, and contribution guides from Arkansas Digital Trailblazer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body data-page="open-source">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../Home/index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Arkansas Digital Trailblazer</span>
+      </a>
+      <ul class="nav-links">
+        <li><a data-nav="home" href="../Home/index.html">Home</a></li>
+        <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
+        <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
+        <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
+        <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+        <li><a data-nav="about" href="../About/Mission.html">About</a></li>
+      </ul>
+    </nav>
 
+    <header class="hero">
+      <div>
+        <span class="tag">Build in public</span>
+        <h1>Open Source Projects &amp; Starter Kits</h1>
+        <p>Reusable Workday snippets, automation scripts, data templates, and civic projects shared by Arkansas builders.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">Explore Projects</a>
+          <a class="btn ghost" href="#ideas">Pitch an Idea</a>
+        </div>
+      </div>
+      <div class="card" style="gap:14px">
+        <h3>How to Contribute</h3>
+        <ol class="muted" style="margin:0 0 0 18px; display:grid; gap:6px">
+          <li>Fork the repository and document your setup.</li>
+          <li>Record a quick Loom or screenshot walkthrough.</li>
+          <li>Submit a PR and share a short write-up in the community Slack.</li>
+        </ol>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid-3">
+          <article class="card" id="workday" data-tags="workday">
+            <h3>Workday Integrations Playbook</h3>
+            <p class="muted">Studio patterns, RAAS templates, and logging middleware to keep integrations resilient.</p>
+            <div class="meta"><span class="badge">Tech</span><span>Python • Workday Studio</span></div>
+            <a class="btn inline" href="#">View Repo</a>
+          </article>
+          <article class="card" id="automation" data-tags="automation">
+            <h3>Automation Cookbook</h3>
+            <p class="muted">Python + Make + Airtable recipes for everyday ops automation. Includes CRON snippets and alerts.</p>
+            <div class="meta"><span class="badge">Automation</span><span>Python • Make</span></div>
+            <a class="btn inline" href="#">View Repo</a>
+          </article>
+          <article class="card" id="civic" data-tags="civic">
+            <h3>Arkansas Broadband Explorer</h3>
+            <p class="muted">Interactive map of broadband speeds, providers, and funding programs across the state.</p>
+            <div class="meta"><span class="badge">Civic Tech</span><span>React • Mapbox</span></div>
+            <a class="btn inline" href="#">View Repo</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="ideas">
+        <h2>Starter Ideas</h2>
+        <div class="table-list">
+          <div class="row">
+            <strong>Workday Health Dashboard</strong>
+            <p class="muted">Simple Extend page that surfaces integration status, last run, and error counts. Ideal for pairing with integrations apprentices.</p>
+          </div>
+          <div class="row">
+            <strong>Community Data Co-op</strong>
+            <p class="muted">Shared dataset of Arkansas workforce needs. Collect surveys, visualize trends, and publish a quarterly brief.</p>
+          </div>
+          <div class="row">
+            <strong>Low-code Intake Bot</strong>
+            <p class="muted">Automation that triages scholarship applications, tags them, and notifies reviewers in Slack.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="guides">
+        <h2>Contribution Guides</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Project Documentation Template</h3>
+            <p class="muted">A Notion + Markdown starter kit for clearly explaining context, setup, and maintenance tasks.</p>
+          </article>
+          <article class="card">
+            <h3>Accessibility Checklist</h3>
+            <p class="muted">Simple checks to keep dashboards and Extend pages usable for everyone.</p>
+          </article>
+          <article class="card">
+            <h3>Data Ethics Brief</h3>
+            <p class="muted">Guidelines for handling PII, communicating limitations, and sharing responsibly.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-inline" href="../Home/index.html">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Arkansas Digital Trailblazer</span>
+          </a>
+          <p class="small">Scholarships, mentorship, and open source support for Arkansas technologists.</p>
+        </div>
+        <div>
+          <h4>Programs</h4>
+          <ul class="footer-links">
+            <li><a href="../Academy/AcademyLanding.html">Academy</a></li>
+            <li><a href="../Giving/Scholarships.html">Funding</a></li>
+            <li><a href="../Careers/CareersHome.html">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="../OpenSource/Projects.html">Open Source</a></li>
+            <li><a href="../Legends/AllLegends.html">Trailblazer Legends</a></li>
+            <li><a href="../About/Faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Stay in touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a></li>
+            <li><a href="https://www.linkedin.com/company/arkansas-digital-trailblazers">LinkedIn</a></li>
+            <li><a href="https://github.com/arkansas-digital-trailblazers">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-note">
+        <span>Made in Arkansas</span>
+        <span>© <span class="js-year"></span> Arkansas Digital Trailblazers</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
