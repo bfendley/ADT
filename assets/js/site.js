@@ -12,6 +12,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  document.querySelectorAll('[data-nav-toggle]').forEach((toggle) => {
+    const nav = toggle.closest('[data-nav-container]');
+    if (!nav) return;
+    const menu = nav.querySelector('[data-nav-list]');
+    if (!menu) return;
+
+    const closeMenu = () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) {
+        const firstLink = menu.querySelector('a');
+        if (firstLink) {
+          firstLink.focus({ preventScroll: true });
+        }
+      }
+    });
+
+    nav.querySelectorAll('[data-nav-list] a').forEach((link) => {
+      link.addEventListener('click', () => closeMenu());
+    });
+
+    const mq = window.matchMedia('(min-width: 961px)');
+    const handleMq = (event) => {
+      if (event.matches) {
+        closeMenu();
+      }
+    };
+
+    mq.addEventListener('change', handleMq);
+
+    document.addEventListener('keyup', (event) => {
+      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+        closeMenu();
+        toggle.focus({ preventScroll: true });
+      }
+    });
+  });
+
   document.querySelectorAll('[data-filter-target]').forEach((group) => {
     const targetSelector = group.getAttribute('data-filter-target');
     if (!targetSelector) return;

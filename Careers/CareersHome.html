@@ -10,23 +10,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css" />
 </head>
-<body data-page="careers">
-  <div class="wrap">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="../Home/index.html">
-        <span class="logo" aria-hidden="true"></span>
-        <span>Arkansas Digital Trailblazer</span>
-      </a>
-      <ul class="nav-links">
-        <li><a data-nav="home" href="../Home/index.html">Home</a></li>
-        <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
-        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
-        <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
-        <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
-        <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
-        <li><a data-nav="about" href="../About/Mission.html">About</a></li>
-      </ul>
-    </nav>
+  <body data-page="careers">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary" data-nav-container>
+        <a class="brand" href="../Home/index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span>Arkansas Digital Trailblazer</span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="primary-nav" data-nav-list>
+          <li><a data-nav="home" href="../Home/index.html">Home</a></li>
+          <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
+          <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
+          <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
+          <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
+          <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+          <li><a data-nav="about" href="../About/Mission.html">About</a></li>
+        </ul>
+      </nav>
 
     <header class="hero">
       <div>
@@ -53,7 +58,7 @@
       </div>
     </header>
 
-    <main>
+      <main id="main-content">
       <section id="open-roles">
         <h2>Open Roles</h2>
         <div class="grid-3" id="roles">
