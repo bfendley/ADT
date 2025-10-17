@@ -11,34 +11,28 @@
   <link rel="stylesheet" href="../assets/css/site.css" />
 </head>
 <body data-page="legends">
-  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="wrap">
-    <nav class="nav" aria-label="Primary" data-nav-container>
+    <nav class="nav" aria-label="Primary">
       <a class="brand" href="../Home/index.html">
         <span class="logo" aria-hidden="true"></span>
         <span>Arkansas Digital Trailblazer</span>
       </a>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <span aria-hidden="true"></span>
-      </button>
-      <ul class="nav-links" id="primary-nav" data-nav-list>
+      <ul class="nav-links">
         <li><a data-nav="home" href="../Home/index.html">Home</a></li>
         <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
         <li><a data-nav="giving" href="../Giving/Funding.html">Funding</a></li>
         <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
         <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
-        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
         <li><a data-nav="about" href="../About/Mission.html">About</a></li>
       </ul>
     </nav>
 
     <header class="hero">
-      <div class="hero-copy">
+      <div>
         <span class="tag">Legend profile</span>
         <h1 id="legend-name">Trailblazer Legend</h1>
         <p id="legend-summary" class="muted">A deeper look at one of the builders shaping Arkansas. Learn how they started, the projects they shipped, and their advice for the next cohort.</p>
-        <div class="pill-group" id="legend-pill-group"></div>
       </div>
       <div class="card" style="gap:16px">
         <h3>Highlights</h3>
@@ -50,38 +44,30 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <main>
       <section id="story">
-        <div class="section-intro">
-          <h2 class="section-lead">Origin story</h2>
-          <p class="section-sub" id="legend-story">This space is ready for a long-form interview. Share their background, the moment they fell in love with building, and the early obstacles they overcame.</p>
-        </div>
+        <h2>Origin Story</h2>
+        <p class="muted" id="legend-story">This space is ready for a long-form interview. Share their background, the moment they fell in love with building, and the early obstacles they overcame.</p>
       </section>
 
       <section id="projects">
-        <div class="section-intro">
-          <h2 class="section-lead">Projects & impact</h2>
-          <p class="section-sub">Explore the work that made this legend stand out.</p>
+        <h2>Projects &amp; Impact</h2>
+        <div class="grid-2" id="legend-projects">
+          <article class="card">
+            <h3>Signature Project</h3>
+            <p class="muted">Describe the flagship project and why it mattered.</p>
+          </article>
+          <article class="card">
+            <h3>Community Ripple Effects</h3>
+            <p class="muted">Highlight who benefited and how the legend shared their knowledge.</p>
+          </article>
         </div>
-        <div class="grid-2" id="legend-projects"></div>
       </section>
 
       <section id="advice">
-        <div class="section-intro">
-          <h2 class="section-lead">Advice to trailblazers</h2>
-          <p class="section-sub">We ask every legend to share honest guidance for the next builder.</p>
-        </div>
+        <h2>Advice to Trailblazers</h2>
         <div class="card">
           <p class="muted" id="legend-advice">Capture their best advice for Arkansans starting out in technology, data, or entrepreneurship.</p>
-        </div>
-      </section>
-
-      <section aria-labelledby="cta">
-        <div class="card">
-          <div class="section-intro">
-            <h2 class="section-lead" id="cta">Nominate the next legend</h2>
-            <p class="section-sub">Email <a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a> with their story, artifacts, and how they invest in Arkansas builders.</p>
-          </div>
         </div>
       </section>
     </main>
@@ -93,7 +79,7 @@
         <a href="../Academy/AcademyLanding.html">Academy</a>
         <a href="../Giving/Funding.html">Funding</a>
       </nav>
-      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers</p>
+      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers LLC</p>
     </footer>
   </div>
 
@@ -114,8 +100,7 @@
           { title: 'Clinical Staffing Dashboard', description: 'Integrated staffing data with Workday to forecast critical coverage gaps and reduce overtime by 12%.' },
           { title: 'Extend Knowledge Base', description: 'Published tutorials, Looms, and templates so new analysts could ship extend pages in weeks instead of months.' }
         ],
-        advice: 'Start with the messy problem in front of you. Ship a scrappy solution, share how you did it, and keep improving it with community feedback.',
-        pills: ['Workday mentor', 'Weekend labs', 'Documentation champion']
+        advice: 'Start with the messy problem in front of you. Ship a scrappy solution, share how you did it, and keep improving it with community feedback.'
       },
       ken: {
         name: 'Ken Patel – Data for Good',
@@ -130,8 +115,7 @@
           { title: 'Workforce Pulse Dashboard', description: 'Aggregated job postings, completions, and wage data for monthly county briefings.' },
           { title: 'Trailblazer Data Residency', description: 'Paired student analysts with non-profits for 6-week data sprints.' }
         ],
-        advice: 'Publish your analysis even if it feels unfinished. The feedback loop is what makes the work better and keeps the community learning together.',
-        pills: ['Data viz', 'Community co-ops', 'Mentor']
+        advice: 'Publish your analysis even if it feels unfinished. The feedback loop is what makes the work better and keeps the community learning together.'
       },
       alicia: {
         name: 'Dr. Alicia Rowe – Educator & Mentor',
@@ -146,12 +130,9 @@
           { title: 'Rural CS Launchpad', description: 'A curriculum and toolkit for rural schools to stand up CS classes in one semester.' },
           { title: 'Arkansas Builder Nights', description: 'Quarterly meetups where students demo projects to mentors and employers.' }
         ],
-        advice: 'Create brave spaces where questions are celebrated. Pair students with a real audience and they’ll surprise you every time.',
-        pills: ['Educator', 'Curriculum designer', 'Mentor']
+        advice: 'Create brave spaces where questions are celebrated. Pair students with a real audience and they’ll surprise you every time.'
       }
     };
-
-    const pillGroup = document.getElementById('legend-pill-group');
 
     if (legend && profiles[legend]) {
       const profile = profiles[legend];
@@ -179,15 +160,6 @@
         projects.appendChild(article);
       });
       document.getElementById('legend-advice').textContent = profile.advice;
-      if (profile.pills && pillGroup) {
-        pillGroup.innerHTML = '';
-        profile.pills.forEach((pill) => {
-          const span = document.createElement('span');
-          span.className = 'pill';
-          span.textContent = pill;
-          pillGroup.appendChild(span);
-        });
-      }
     }
   </script>
   <script src="../assets/js/site.js"></script>
