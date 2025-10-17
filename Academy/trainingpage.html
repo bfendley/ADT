@@ -21,10 +21,10 @@
         <li><a data-nav="home" href="../Home/index.html">Home</a></li>
         <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
         <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
-        <li><a data-nav="giving" href="../Giving/Scholarships.html">Funding</a></li>
+        <li><a data-nav="giving" href="../Giving/Funding.html">Funding</a></li>
         <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
         <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
-        <li><a data-nav="about" href="../About/Mission.html">About</a></li>
+        <li><a data-nav="about" href="../About/About.html">About</a></li>
       </ul>
     </nav>
 
@@ -35,7 +35,7 @@
         <p id="course-summary" class="muted">This page highlights a Trailblazer Academy module. Explore what you'll build, the format, and how to enroll.</p>
         <div class="cta">
           <a class="btn" href="#curriculum">See Curriculum</a>
-          <a class="btn ghost" href="../Giving/Scholarships.html#aid">Request Aid</a>
+          <a class="btn ghost" href="../Giving/Funding.html#scholarships">Request Aid</a>
         </div>
       </div>
       <div class="card" style="gap:12px">
@@ -102,19 +102,13 @@
       <section id="enroll">
         <h2>Enroll</h2>
         <div class="card">
-          <p class="muted" id="course-enroll">Ready to join? Fill out the short form and we’ll send next steps.</p>
-          <form action="#">
-            <label class="small">Name
-              <input name="name" required placeholder="Your name" />
-            </label>
-            <label class="small">Email
-              <input type="email" name="email" required placeholder="you@example.com" />
-            </label>
-            <label class="small">Tell us about your goals
-              <textarea name="goals" rows="3" placeholder="What do you want to get out of this course?"></textarea>
-            </label>
-            <button class="btn" type="submit">Reserve Your Seat</button>
-          </form>
+          <p class="muted" id="course-enroll">Ready to join? Email <a href="mailto:hello@ardigitaltrailblazer.com">hello@ardigitaltrailblazer.com</a> with the course name in the subject line and we’ll send next steps.</p>
+          <ul class="muted" style="display:grid; gap:10px; margin:0; padding-left:20px">
+            <li><strong>Share your goals:</strong> Briefly tell us what you want to learn or ship.</li>
+            <li><strong>Include your timeline:</strong> Let us know when you hope to start.</li>
+            <li><strong>Add relevant links:</strong> Portfolios, GitHub repos, or docs that provide context.</li>
+          </ul>
+          <p class="small muted" style="margin-top:12px">We reply within two business days with enrollment steps and scholarship options.</p>
         </div>
       </section>
     </main>
@@ -123,7 +117,7 @@
       <nav aria-label="Footer">
         <a href="../Academy/AcademyLanding.html">Back to Catalog</a>
         <a href="../Home/index.html">Home</a>
-        <a href="../Giving/Scholarships.html">Funding</a>
+        <a href="../Giving/Funding.html">Funding</a>
       </nav>
       <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers LLC</p>
     </footer>
@@ -156,7 +150,7 @@
           ['Office Hours', 'Weekly drop-in hours with Trailblazer data mentors'],
           ['Async Reviews', 'Submit Looms for rapid feedback within 48 hours']
         ],
-        enroll: 'Complete the form and we’ll send the self-paced kit plus mentor office hour schedule.'
+        enroll: 'Email hello@ardigitaltrailblazer.com with the subject “Data Projects 101” and we’ll send the self-paced kit plus mentor office hour schedule.'
       },
       automation: {
         title: 'APIs & Automation Quickstart',
@@ -181,7 +175,7 @@
           ['Office Hours', 'Live pairing sessions to debug issues'],
           ['Community Channel', 'Async support in the Trailblazer Slack']
         ],
-        enroll: 'Reserve a seat and we’ll share the GitHub repo plus onboarding call details.'
+        enroll: 'Email hello@ardigitaltrailblazer.com with the subject “Automation Quickstart” and we’ll share the GitHub repo plus onboarding call details.'
       },
       'workday-integrations': {
         title: 'Workday Integrations Lab',
@@ -207,7 +201,7 @@
           ['Office Hours', 'Weekly pair programming with Workday experts'],
           ['Demo Day', 'Final presentation with feedback from partner teams']
         ],
-        enroll: 'Complete the form and we’ll schedule a short intake call before sending payment details.'
+        enroll: 'Email hello@ardigitaltrailblazer.com with the subject “Workday Integrations” and we’ll schedule a short intake call before sending payment details.'
       },
       extend: {
         title: 'Workday Extend Builder Lab',
@@ -231,7 +225,7 @@
           ['Design Reviews', 'Async Loom critiques of page flows'],
           ['Launch Support', 'One-on-one help during go-live week']
         ],
-        enroll: 'We’ll follow up with workshop dates and prep work after you submit the form.'
+        enroll: 'Email hello@ardigitaltrailblazer.com with the subject “Extend Builder Lab” and we’ll follow up with workshop dates and prep work.'
       },
       story: {
         title: 'Portfolio & Public Writing',
@@ -256,7 +250,7 @@
           ['Copy Clinic', 'Async edits on your draft'],
           ['Community Thread', 'Celebrate wins with the alumni network']
         ],
-        enroll: 'Submit the form and we’ll send templates plus accountability check-ins.'
+        enroll: 'Email hello@ardigitaltrailblazer.com with the subject “Portfolio & Public Writing” and we’ll send templates plus accountability check-ins.'
       },
       stats: {
         title: 'Applied Stats for Builders',
@@ -281,7 +275,7 @@
           ['Stats Hotline', 'Slack channel for quick questions'],
           ['Live Labs', 'Hands-on sessions to walk through real datasets']
         ],
-        enroll: 'Apply for the next cohort and we’ll follow up with schedule options and funding support.'
+        enroll: 'Email hello@ardigitaltrailblazer.com with the subject “Applied Stats Cohort” and we’ll follow up with schedule options and funding support.'
       }
     };
 
