@@ -11,97 +11,136 @@
   <link rel="stylesheet" href="../assets/css/site.css" />
 </head>
 <body data-page="legends">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="wrap">
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Primary" data-nav-container>
       <a class="brand" href="../Home/index.html">
         <span class="logo" aria-hidden="true"></span>
         <span>Arkansas Digital Trailblazer</span>
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="primary-nav" data-nav-list>
         <li><a data-nav="home" href="../Home/index.html">Home</a></li>
         <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
-        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
         <li><a data-nav="giving" href="../Giving/Funding.html">Funding</a></li>
         <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
         <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
         <li><a data-nav="about" href="../About/Mission.html">About</a></li>
       </ul>
     </nav>
 
     <header class="hero">
-      <div>
+      <div class="hero-copy">
         <span class="tag">Trailblazer Legends</span>
-        <h1>Arkansas Builders Who Paved the Way</h1>
-        <p>Interviews, oral histories, and essays celebrating the technologists and educators who invested in Arkansas long before it was trendy.</p>
+        <h1>Arkansas builders who paved the way</h1>
+        <p>Interviews, oral histories, and essays celebrating the technologists and educators who invested in Arkansas long before it was trendy. Each story includes actionable insights you can use today.</p>
+        <div class="pill-group">
+          <span class="pill">Long-form interviews</span>
+          <span class="pill">Project archives</span>
+          <span class="pill">Community premieres</span>
+        </div>
         <div class="cta">
-          <a class="btn" href="#features">Read Profiles</a>
-          <a class="btn ghost" href="#nominate">Nominate a Legend</a>
+          <a class="btn" href="#features">Read profiles</a>
+          <a class="btn ghost" href="#nominate">Nominate a legend</a>
         </div>
       </div>
-      <div class="card" style="gap:14px">
-        <h3>Why We Document Stories</h3>
+      <div class="card stack">
+        <h3>Why we document stories</h3>
         <p class="muted">We believe seeing someone like you matters. Legends spotlights practical builders who mentored others, shipped civic tools, and created new pathways.</p>
       </div>
     </header>
 
-    <main>
-      <section id="features">
-        <h2>Featured Legends</h2>
+    <main id="main-content">
+      <section id="features" aria-labelledby="features-heading">
+        <div class="section-intro">
+          <h2 class="section-lead" id="features-heading">Featured legends</h2>
+          <p class="section-sub">Start with these interviews, then dive deeper into the archive for more Arkansas builders.</p>
+        </div>
         <div class="grid-3">
           <article class="card">
             <h3>Monica Harris – The Workday Whisperer</h3>
             <p class="muted">Scaled Workday across a regional health system and taught dozens of analysts through weekend labs.</p>
-            <a class="btn inline" href="LegendPage.html?legend=monica">Read Interview</a>
+            <a class="btn inline" href="LegendPage.html?legend=monica">Read interview</a>
           </article>
           <article class="card">
             <h3>Ken Patel – Data for Good</h3>
             <p class="muted">Turned statewide workforce data into simple dashboards that shaped apprenticeship policy.</p>
-            <a class="btn inline" href="LegendPage.html?legend=ken">Read Interview</a>
+            <a class="btn inline" href="LegendPage.html?legend=ken">Read interview</a>
           </article>
           <article class="card">
-            <h3>Dr. Alicia Rowe – Educator &amp; Mentor</h3>
+            <h3>Dr. Alicia Rowe – Educator & Mentor</h3>
             <p class="muted">Built computer science programs in rural districts and mentored first-gen college students.</p>
-            <a class="btn inline" href="LegendPage.html?legend=alicia">Read Interview</a>
+            <a class="btn inline" href="LegendPage.html?legend=alicia">Read interview</a>
           </article>
         </div>
       </section>
 
-      <section id="series">
-        <h2>Series Format</h2>
+      <section id="series" aria-labelledby="series-heading">
+        <div class="section-intro">
+          <h2 class="section-lead" id="series-heading">Series format</h2>
+          <p class="section-sub">Every legend feature follows the same structure so you can reuse it in your classroom, meetup, or mentorship program.</p>
+        </div>
         <div class="grid-3">
           <article class="card">
-            <h3>Long-form Interviews</h3>
+            <h3>Long-form interviews</h3>
             <p class="muted">45-minute conversations transcribed and edited for clarity. Includes actionable advice and resources.</p>
           </article>
           <article class="card">
-            <h3>Artifacts &amp; Archives</h3>
+            <h3>Artifacts & archives</h3>
             <p class="muted">We collect screenshots, slide decks, and demos from each legend so future builders can learn.</p>
           </article>
           <article class="card">
-            <h3>Community Premiere</h3>
-            <p class="muted">Each story drops with a live community call, Q&amp;A, and a builder challenge inspired by the legend.</p>
+            <h3>Community premiere</h3>
+            <p class="muted">Each story drops with a live community call, Q&A, and a builder challenge inspired by the legend.</p>
           </article>
         </div>
       </section>
 
-      <section id="nominate">
-        <h2>Nominate a Legend</h2>
+      <section id="nominate" aria-labelledby="nominate-heading">
         <div class="card">
-          <form action="#">
-            <label class="small">Your Name
-              <input name="name" required placeholder="Your name" />
-            </label>
-            <label class="small">Email
-              <input type="email" name="email" required placeholder="you@example.com" />
-            </label>
-            <label class="small">Nominee Name
-              <input name="nominee" required placeholder="Who should we feature?" />
-            </label>
-            <label class="small">Why are they a legend?
-              <textarea name="story" rows="4" placeholder="Share their impact, projects, or mentorship"></textarea>
-            </label>
-            <button class="btn" type="submit">Submit Nomination</button>
-          </form>
+          <div class="section-intro">
+            <h2 class="section-lead" id="nominate-heading">Nominate a legend</h2>
+            <p class="section-sub">Know someone we should feature? Email <a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a> with their story, links to their work, and how they’ve lifted Arkansas builders.</p>
+          </div>
+          <div class="grid-2">
+            <div class="stack">
+              <h3>What we look for</h3>
+              <ul class="muted" style="margin:0 0 0 18px; display:grid; gap:6px">
+                <li>Documented projects or programs that improved access to tech, data, or automation.</li>
+                <li>Evidence of mentorship or teaching others.</li>
+                <li>Willingness to share lessons learned and challenges faced.</li>
+              </ul>
+            </div>
+            <div class="stack">
+              <h3>How the process works</h3>
+              <p class="muted">We review nominations monthly, schedule a 30-minute discovery call, and co-write the final story with the legend.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="archive">
+        <div class="section-intro">
+          <h2 class="section-lead" id="archive">Bring legends into your work</h2>
+          <p class="section-sub">Every feature includes ready-to-use materials.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Classroom discussion guides</h3>
+            <p class="muted">Prompt questions, project extensions, and mini-labs for middle school through adult learners.</p>
+          </article>
+          <article class="card">
+            <h3>Community event kits</h3>
+            <p class="muted">Run your own legend premiere with slide decks, social templates, and facilitator notes.</p>
+          </article>
+          <article class="card">
+            <h3>Press-ready media</h3>
+            <p class="muted">High-res photos, bios, and pull quotes for partners sharing the story.</p>
+          </article>
         </div>
       </section>
     </main>
@@ -110,10 +149,10 @@
       <nav aria-label="Footer">
         <a href="../Home/index.html">Home</a>
         <a href="../Academy/AcademyLanding.html">Academy</a>
-        <a href="../Careers/CareersHome.html">Careers</a>
         <a href="../Giving/Funding.html">Funding</a>
+        <a href="../OpenSource/Projects.html">Open Source</a>
       </nav>
-      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers LLC</p>
+      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers</p>
     </footer>
   </div>
 

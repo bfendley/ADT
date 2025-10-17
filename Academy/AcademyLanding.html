@@ -3,105 +3,208 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trailblazer Academy – Trainings for Arkansas Builders</title>
-  <meta name="description" content="Trailblazer Academy delivers practical trainings for Workday, automation, and data practitioners in Arkansas." />
+  <title>Trailblazer Academy – Free Trainings for Arkansas Builders</title>
+  <meta name="description" content="Trailblazer Academy delivers free, practical trainings for Workday, automation, and data practitioners in Arkansas." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css" />
 </head>
 <body data-page="academy">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="wrap">
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Primary" data-nav-container>
       <a class="brand" href="../Home/index.html">
         <span class="logo" aria-hidden="true"></span>
         <span>Arkansas Digital Trailblazer</span>
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="primary-nav" data-nav-list>
         <li><a data-nav="home" href="../Home/index.html">Home</a></li>
         <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
-        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
         <li><a data-nav="giving" href="../Giving/Funding.html">Funding</a></li>
         <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
         <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
+        <li><a data-nav="careers" href="../Careers/CareersHome.html">Careers</a></li>
         <li><a data-nav="about" href="../About/Mission.html">About</a></li>
       </ul>
     </nav>
 
     <header class="hero">
-      <div>
+      <div class="hero-copy">
         <span class="tag">Trailblazer Academy</span>
-        <h1>Learn by Shipping Real Things</h1>
-        <p>Modular trainings for builders who want to level up fast. Each course ends with a project artifact, peer feedback, and access to mentors.</p>
+        <h1>Free trainings that end in shipped work</h1>
+        <p>Every cohort focuses on a real artifact—automation scripts, Workday dashboards, public write-ups, and more. Sessions are free for Arkansas residents and recorded for replay.</p>
+        <div class="pill-group">
+          <span class="pill">Live labs & sprints</span>
+          <span class="pill">Self-paced kits</span>
+          <span class="pill">Mentor office hours</span>
+        </div>
         <div class="cta">
-          <a class="btn" href="#catalog">View Catalog</a>
-          <a class="btn ghost" href="../Giving/Funding.html#scholarships">Apply for Aid</a>
+          <a class="btn" href="#catalog">View course catalog</a>
+          <a class="btn ghost" href="#schedule">Upcoming schedule</a>
         </div>
       </div>
-      <div class="card" style="gap:16px">
-        <h3>How the Academy Works</h3>
+      <div class="card stack">
+        <h3>What to expect</h3>
         <ul class="muted" style="margin:0 0 0 18px; display:grid; gap:6px">
-          <li>Self-paced and live workshops with hands-on deliverables.</li>
+          <li>Free access for Arkansas builders—no fees, no hidden steps.</li>
+          <li>Deliverables you can add to your portfolio or take straight to work.</li>
           <li>Mentor feedback, office hours, and alumni accountability.</li>
-          <li>Scholarships &amp; fee waivers for Arkansas residents.</li>
         </ul>
       </div>
     </header>
 
-    <main>
-      <section id="catalog">
-        <h2>Course Catalog</h2>
-        <p class="muted">Use the filters to find the right mix of free primers and paid deep dives across Workday, automation, data, and web.</p>
+    <main id="main-content">
+      <section id="catalog" aria-labelledby="catalog-heading">
+        <div class="section-intro">
+          <h2 class="section-lead" id="catalog-heading">Course catalog</h2>
+          <p class="section-sub">Use the filters to find the right mix of self-paced kits, live labs, and mentorship-heavy sprints.</p>
+        </div>
         <div class="filters" data-filter-target="#catalog-grid">
           <button class="chip" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip" data-filter="free" aria-pressed="false">Free</button>
-          <button class="chip" data-filter="paid" aria-pressed="false">Paid</button>
-          <button class="chip" data-filter="data" aria-pressed="false">Data</button>
-          <button class="chip" data-filter="automation" aria-pressed="false">Automation</button>
+          <button class="chip" data-filter="self-paced" aria-pressed="false">Self-paced</button>
+          <button class="chip" data-filter="live" aria-pressed="false">Live lab</button>
+          <button class="chip" data-filter="mentorship" aria-pressed="false">Mentorship</button>
           <button class="chip" data-filter="workday" aria-pressed="false">Workday</button>
-          <button class="chip" data-filter="web" aria-pressed="false">Web</button>
+          <button class="chip" data-filter="automation" aria-pressed="false">Automation</button>
+          <button class="chip" data-filter="data" aria-pressed="false">Data</button>
+          <button class="chip" data-filter="storytelling" aria-pressed="false">Storytelling</button>
         </div>
         <div class="grid-3" id="catalog-grid">
-          <article class="card course" data-tags="free data">
+          <article class="card course" data-tags="free self-paced data mentorship">
             <h3>Data Projects 101</h3>
             <p class="muted">Clean, visualize, and communicate a dataset with a polished one-page brief.</p>
             <div class="meta"><span class="badge free">Free</span><span>Self-paced • 2–3 hrs</span></div>
             <div class="cta"><a class="btn ghost" href="trainingpage.html?course=data-projects">Start</a></div>
           </article>
-          <article class="card course" data-tags="free automation">
-            <h3>APIs &amp; Automation Quickstart</h3>
+          <article class="card course" data-tags="free self-paced automation mentorship">
+            <h3>APIs & Automation Quickstart</h3>
             <p class="muted">Fetch data on a schedule and ship a reporting email with guardrails.</p>
             <div class="meta"><span class="badge free">Free</span><span>Self-paced • 2 hrs</span></div>
             <div class="cta"><a class="btn ghost" href="trainingpage.html?course=automation">Start</a></div>
           </article>
-          <article class="card course" data-tags="paid workday">
+          <article class="card course" data-tags="free live workday mentorship">
             <h3>Workday Integrations Lab</h3>
             <p class="muted">Studio, EIB, and RAAS builds with logging, retries, and reviews.</p>
-            <div class="meta"><span class="badge paid">Paid</span><span>$149 • Live • 4 weeks</span></div>
-            <div class="cta"><a class="btn" href="trainingpage.html?course=workday-integrations">Enroll</a></div>
+            <div class="meta"><span class="badge free">Free</span><span>Live cohort • 4 weeks</span></div>
+            <div class="cta"><a class="btn" href="trainingpage.html?course=workday-integrations">Reserve seat</a></div>
           </article>
-          <article class="card course" data-tags="paid workday web">
+          <article class="card course" data-tags="free live workday mentorship">
             <h3>Workday Extend Builder Lab</h3>
             <p class="muted">Create Extend pages with conditional logic, attachments, and dashboards.</p>
-            <div class="meta"><span class="badge paid">Paid</span><span>$79 • Live workshop</span></div>
-            <div class="cta"><a class="btn" href="trainingpage.html?course=extend">Enroll</a></div>
+            <div class="meta"><span class="badge free">Free</span><span>Live workshop • 2 sessions</span></div>
+            <div class="cta"><a class="btn" href="trainingpage.html?course=extend">Reserve seat</a></div>
           </article>
-          <article class="card course" data-tags="free web">
-            <h3>Portfolio &amp; Public Writing</h3>
+          <article class="card course" data-tags="free self-paced storytelling mentorship">
+            <h3>Portfolio & Public Writing</h3>
             <p class="muted">Tell the story of what you built and the decision it influenced.</p>
             <div class="meta"><span class="badge free">Free</span><span>Self-paced • 1 hr</span></div>
             <div class="cta"><a class="btn ghost" href="trainingpage.html?course=story">Start</a></div>
           </article>
-          <article class="card course" data-tags="paid data">
+          <article class="card course" data-tags="free live data mentorship">
             <h3>Applied Stats for Builders</h3>
             <p class="muted">Confidence intervals, regression, and causal thinking without fluff.</p>
-            <div class="meta"><span class="badge paid">Paid</span><span>$99 • Hybrid</span></div>
-            <div class="cta"><a class="btn" href="trainingpage.html?course=stats">Enroll</a></div>
+            <div class="meta"><span class="badge free">Free</span><span>Hybrid • 3 weeks</span></div>
+            <div class="cta"><a class="btn" href="trainingpage.html?course=stats">Reserve seat</a></div>
           </article>
         </div>
       </section>
 
-      
+      <section id="schedule" aria-labelledby="schedule-heading">
+        <div class="section-intro">
+          <h2 class="section-lead" id="schedule-heading">Upcoming schedule</h2>
+          <p class="section-sub">All sessions are free. Email <a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a> with the course name to get the calendar invite and prep kit.</p>
+        </div>
+        <div class="table-list">
+          <div class="row">
+            <strong>May Cohort</strong>
+            <p class="muted">Workday Integrations Lab • Thursdays @ 6pm CT • Live on Zoom • Mentor reviews every Monday.</p>
+          </div>
+          <div class="row">
+            <strong>June Sprint</strong>
+            <p class="muted">Automation Quickstart • On-demand videos + Saturday office hours • Submit deliverables for feedback.</p>
+          </div>
+          <div class="row">
+            <strong>July Residency</strong>
+            <p class="muted">Applied Stats for Builders • Hybrid sessions with civic partners • Demo day on July 26.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience">
+        <div class="section-intro">
+          <h2 class="section-lead" id="experience">The Trailblazer learning experience</h2>
+          <p class="section-sub">Every academy module follows a simple loop so you never wonder what to do next.</p>
+        </div>
+        <div class="step-grid">
+          <div class="step-card">
+            <strong>1</strong>
+            <h3>Scope the outcome</h3>
+            <p class="muted">Kick off with a short planning call or async checklist to clarify the artifact you’ll ship.</p>
+          </div>
+          <div class="step-card">
+            <strong>2</strong>
+            <h3>Build with templates</h3>
+            <p class="muted">Use shared repos, worksheets, and Looms to move quickly without sacrificing quality.</p>
+          </div>
+          <div class="step-card">
+            <strong>3</strong>
+            <h3>Get feedback fast</h3>
+            <p class="muted">Office hours, async reviews, and peer accountability threads keep momentum high.</p>
+          </div>
+          <div class="step-card">
+            <strong>4</strong>
+            <h3>Publish & celebrate</h3>
+            <p class="muted">Share your work in the community showcase and add it to our public gallery.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="resources">
+        <div class="section-intro">
+          <h2 class="section-lead" id="resources">Included in every course</h2>
+          <p class="section-sub">We want you to spend time building—not hunting for resources.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Replay library</h3>
+            <p class="muted">Every session is recorded and timestamped so you can rewatch or catch up easily.</p>
+          </article>
+          <article class="card">
+            <h3>Mentor directory</h3>
+            <p class="muted">Reach out to mentors by discipline for office hours, code reviews, and career advice.</p>
+          </article>
+          <article class="card">
+            <h3>Tool stipends</h3>
+            <p class="muted">Need access to software or equipment? Micro-stipends cover the essentials.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="cta">
+        <div class="card">
+          <div class="section-intro">
+            <h2 class="section-lead" id="cta">Ready to join?</h2>
+            <p class="section-sub">Email <a href="mailto:hello@trailblazerscholarship.com">hello@trailblazerscholarship.com</a> with the course name. We’ll confirm your seat, share the prep kit, and invite you to the community Slack.</p>
+          </div>
+          <div class="grid-2">
+            <div class="stack">
+              <h3>Prefer guidance?</h3>
+              <p class="muted">Not sure where to start? Request a 15-minute matching call and we’ll recommend a path.</p>
+              <a class="btn ghost" href="mailto:hello@trailblazerscholarship.com?subject=Trailblazer%20Academy%20Match">Request a match</a>
+            </div>
+            <div class="stack">
+              <h3>Bring a group</h3>
+              <p class="muted">We love hosting cohorts for schools, teams, and community groups. Share your dates and we’ll customize a sprint.</p>
+              <a class="btn ghost" href="mailto:hello@trailblazerscholarship.com?subject=Host%20an%20Academy%20Lab">Host a lab</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -111,7 +214,7 @@
         <a href="../Careers/CareersHome.html">Careers</a>
         <a href="../OpenSource/Projects.html">Open Source</a>
       </nav>
-      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers LLC</p>
+      <p class="small">Made in Arkansas • © <span class="js-year"></span> Arkansas Digital Trailblazers</p>
     </footer>
   </div>
 
