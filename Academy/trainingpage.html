@@ -12,15 +12,18 @@
 </head>
 <body data-page="academy">
   <div class="wrap">
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Primary" data-nav-container>
       <a class="brand" href="../Home/index.html">
         <span class="logo" aria-hidden="true"></span>
         <span>Arkansas Digital Trailblazer</span>
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="primary-nav" data-nav-list>
         <li><a data-nav="home" href="../Home/index.html">Home</a></li>
         <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
-        <li><a data-nav="join-us" href="../About/Mission.html#join-us">Join Us</a></li>
         <li><a data-nav="giving" href="../Giving/Funding.html">Funding</a></li>
         <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
         <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
@@ -99,24 +102,6 @@
         </div>
       </section>
 
-      <section id="enroll">
-        <h2>Enroll</h2>
-        <div class="card">
-          <p class="muted" id="course-enroll">Ready to join? Fill out the short form and we’ll send next steps.</p>
-          <form action="#">
-            <label class="small">Name
-              <input name="name" required placeholder="Your name" />
-            </label>
-            <label class="small">Email
-              <input type="email" name="email" required placeholder="you@example.com" />
-            </label>
-            <label class="small">Tell us about your goals
-              <textarea name="goals" rows="3" placeholder="What do you want to get out of this course?"></textarea>
-            </label>
-            <button class="btn" type="submit">Reserve Your Seat</button>
-          </form>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
@@ -156,7 +141,6 @@
           ['Office Hours', 'Weekly drop-in hours with Trailblazer data mentors'],
           ['Async Reviews', 'Submit Looms for rapid feedback within 48 hours']
         ],
-        enroll: 'Complete the form and we’ll send the self-paced kit plus mentor office hour schedule.'
       },
       automation: {
         title: 'APIs & Automation Quickstart',
@@ -181,7 +165,6 @@
           ['Office Hours', 'Live pairing sessions to debug issues'],
           ['Community Channel', 'Async support in the Trailblazer Slack']
         ],
-        enroll: 'Reserve a seat and we’ll share the GitHub repo plus onboarding call details.'
       },
       'workday-integrations': {
         title: 'Workday Integrations Lab',
@@ -207,7 +190,6 @@
           ['Office Hours', 'Weekly pair programming with Workday experts'],
           ['Demo Day', 'Final presentation with feedback from partner teams']
         ],
-        enroll: 'Complete the form and we’ll schedule a short intake call before sending payment details.'
       },
       extend: {
         title: 'Workday Extend Builder Lab',
@@ -231,7 +213,6 @@
           ['Design Reviews', 'Async Loom critiques of page flows'],
           ['Launch Support', 'One-on-one help during go-live week']
         ],
-        enroll: 'We’ll follow up with workshop dates and prep work after you submit the form.'
       },
       story: {
         title: 'Portfolio & Public Writing',
@@ -256,7 +237,6 @@
           ['Copy Clinic', 'Async edits on your draft'],
           ['Community Thread', 'Celebrate wins with the alumni network']
         ],
-        enroll: 'Submit the form and we’ll send templates plus accountability check-ins.'
       },
       stats: {
         title: 'Applied Stats for Builders',
@@ -281,7 +261,6 @@
           ['Stats Hotline', 'Slack channel for quick questions'],
           ['Live Labs', 'Hands-on sessions to walk through real datasets']
         ],
-        enroll: 'Apply for the next cohort and we’ll follow up with schedule options and funding support.'
       }
     };
 
@@ -336,7 +315,6 @@
         article.append(h3, p);
         mentors.appendChild(article);
       });
-      document.getElementById('course-enroll').textContent = data.enroll;
     }
   </script>
   <script src="../assets/js/site.js"></script>

@@ -12,15 +12,18 @@
 </head>
 <body data-page="open-source">
   <div class="wrap">
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Primary" data-nav-container>
       <a class="brand" href="../Home/index.html">
         <span class="logo" aria-hidden="true"></span>
         <span>Arkansas Digital Trailblazer</span>
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="primary-nav" data-nav-list>
         <li><a data-nav="home" href="../Home/index.html">Home</a></li>
         <li><a data-nav="academy" href="../Academy/AcademyLanding.html">Academy</a></li>
-        <li><a data-nav="join-us" href="../About/Mission.html#join-us">Join Us</a></li>
         <li><a data-nav="giving" href="../Giving/Funding.html">Funding</a></li>
         <li><a data-nav="open-source" href="../OpenSource/Projects.html">Open Source</a></li>
         <li><a data-nav="legends" href="../Legends/AllLegends.html">Legends</a></li>
