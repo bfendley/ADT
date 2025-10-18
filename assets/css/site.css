@@ -11,14 +11,14 @@
   --accent-strong: #1656a2;
   --accent-gradient: linear-gradient(135deg, #3aa0ff, #2a7de1);
   --focus-ring: rgba(42, 125, 225, 0.45);
-  --measure: 64ch;
+  --measure: 70ch;
   --radius-lg: 18px;
   --radius-md: 14px;
   --radius-sm: 10px;
   --shadow: 0 18px 40px rgba(16, 36, 69, 0.08);
   --shadow-soft: 0 12px 30px rgba(16, 36, 69, 0.05);
   --shadow-card: 0 10px 26px rgba(16, 36, 69, 0.08);
-  --max-width: 1120px;
+  --max-width: clamp(320px, 96vw, 1320px);
 }
 
 * {
@@ -33,7 +33,7 @@ body {
   color: var(--ink);
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.62;
-  font-size: clamp(16px, 0.34vw + 15px, 18px);
+  font-size: clamp(15px, 0.28vw + 15px, 17.5px);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
@@ -97,12 +97,12 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(2.1rem, 4vw, 3.25rem);
+  font-size: clamp(2rem, 2.8vw + 1rem, 3.1rem);
   line-height: 1.08;
 }
 
 h2 {
-  font-size: clamp(1.65rem, 2.8vw, 2.25rem);
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
 }
 
 h3 {
@@ -120,9 +120,9 @@ ul {
 }
 
 .wrap {
-  max-width: var(--max-width);
+  width: min(100%, var(--max-width));
   margin: 0 auto;
-  padding: 28px 24px 60px;
+  padding: clamp(24px, 4vw, 48px) clamp(18px, 4vw, 40px) clamp(48px, 6vw, 84px);
 }
 
 .skip-link {
@@ -146,11 +146,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 18px 24px;
-  margin-bottom: 40px;
+  gap: clamp(16px, 2vw, 28px);
+  padding: clamp(14px, 2vw, 22px) clamp(18px, 2.5vw, 28px);
+  margin-bottom: clamp(28px, 4vw, 56px);
   position: sticky;
-  top: 24px;
+  top: clamp(12px, 2vw, 28px);
   z-index: 20;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.92);
@@ -281,11 +281,11 @@ ul {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 44px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
   align-items: stretch;
-  margin-bottom: 56px;
-  padding: 42px;
+  margin-bottom: clamp(36px, 5vw, 72px);
+  padding: clamp(26px, 5vw, 46px);
   background: linear-gradient(180deg, rgba(225, 237, 255, 0.7), rgba(255, 255, 255, 0.95));
   border: 1px solid rgba(16, 36, 69, 0.08);
   border-radius: calc(var(--radius-lg) + 4px);
@@ -309,7 +309,7 @@ ul {
 
 .hero-copy {
   display: grid;
-  gap: 18px;
+  gap: clamp(14px, 2vw, 22px);
 }
 
 .hero-copy h1,
@@ -319,18 +319,18 @@ ul {
 }
 
 .hero-copy h2 {
-  font-size: clamp(1.45rem, 2.5vw, 2.05rem);
-  margin-top: 18px;
+  font-size: clamp(1.35rem, 2.4vw, 1.95rem);
+  margin-top: clamp(12px, 2vw, 20px);
 }
 
 .hero-copy p {
   color: var(--ink-soft);
-  font-size: 1.02rem;
+  font-size: clamp(0.96rem, 0.5vw + 0.85rem, 1.02rem);
 }
 
 .hero-rotation {
   position: relative;
-  padding: 28px 28px 86px;
+  padding: clamp(22px, 3vw, 32px) clamp(22px, 3vw, 32px) clamp(60px, 5vw, 90px);
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(16, 36, 69, 0.08);
   border-radius: var(--radius-lg);
@@ -499,7 +499,7 @@ ul {
 
 main {
   display: grid;
-  gap: 72px;
+  gap: clamp(48px, 6vw, 88px);
 }
 
 section {
@@ -508,11 +508,11 @@ section {
 
 main > section {
   display: grid;
-  gap: 22px;
+  gap: clamp(18px, 3vw, 28px);
 }
 
 main > section:not(:last-child) {
-  margin-bottom: 56px;
+  margin-bottom: clamp(32px, 4vw, 60px);
 }
 
 main > section > p {
@@ -523,10 +523,10 @@ main > section > p {
   background: var(--surface);
   border: 1px solid rgba(16, 36, 69, 0.08);
   border-radius: var(--radius-lg);
-  padding: 24px 28px;
+  padding: clamp(20px, 2.2vw, 28px) clamp(20px, 2.6vw, 32px);
   box-shadow: var(--shadow-soft);
   display: grid;
-  gap: 16px;
+  gap: clamp(14px, 2vw, 20px);
   align-content: start;
 }
 
@@ -542,7 +542,7 @@ main > section > p {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: clamp(20px, 3vw, 28px);
   align-items: stretch;
 }
 
@@ -900,9 +900,9 @@ main > section > p {
 @media (max-width: 900px) {
   .nav {
     flex-wrap: wrap;
-    gap: 14px;
-    padding: 16px 20px;
-    top: 16px;
+    gap: 12px;
+    padding: 14px 18px;
+    top: 12px;
   }
 
   .nav-toggle {
@@ -930,12 +930,12 @@ main > section > p {
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 32px 28px;
+    padding: 26px 24px;
   }
 
   .hero-rotation {
     order: -1;
-    padding: 24px 24px 80px;
+    padding: 22px 22px 72px;
   }
 
   .stat-list {
@@ -987,8 +987,8 @@ main > section > p {
   }
 
   .hero {
-    padding: 26px 22px;
-    margin-bottom: 44px;
+    padding: 22px 20px;
+    margin-bottom: 38px;
   }
 
   main {
@@ -1001,6 +1001,37 @@ main > section > p {
 
   main > section:not(:last-child) {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  .wrap {
+    padding: 20px 16px 44px;
+  }
+
+  .nav {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    right: 16px;
+  }
+
+  .hero {
+    padding: 20px 18px;
+  }
+
+  .hero-rotation {
+    padding: 20px 20px 64px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .feature-grid {
+    gap: 18px;
   }
 }
 
