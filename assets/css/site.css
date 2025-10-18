@@ -776,17 +776,101 @@ main > section > p {
   margin-bottom: 12px;
 }
 
-.funding-section {
-  gap: 24px;
+
+body[data-page="giving"] {
+  background: #f5f7fb;
 }
 
-.funding-section .card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(16, 36, 69, 0.08);
+body[data-page="giving"] .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  background: #ffffff;
+  border: 1px solid #c7d2e3;
+  box-shadow: none;
+  padding: clamp(32px, 5vw, 56px);
 }
 
-.funding-section .btn {
-  justify-self: start;
+body[data-page="giving"] .hero::after {
+  display: none;
+}
+
+body[data-page="giving"] .hero .tag {
+  background: #e1e7f5;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+body[data-page="giving"] .hero p {
+  color: var(--ink);
+  max-width: 60ch;
+}
+
+.funding-main {
+  display: grid;
+  gap: clamp(36px, 5vw, 64px);
+}
+
+.funding-grid {
+  display: grid;
+  gap: clamp(24px, 4vw, 40px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.funding-card,
+.funding-apply {
+  background: #ffffff;
+  border: 1px solid #c7d2e3;
+  border-radius: var(--radius-md);
+  padding: clamp(24px, 4vw, 36px);
+  display: grid;
+  gap: clamp(18px, 2.5vw, 24px);
+  box-shadow: none;
+}
+
+.funding-card__header {
+  display: grid;
+  gap: 12px;
+}
+
+.funding-card__body {
+  display: grid;
+  gap: 18px;
+}
+
+.funding-card__body ul,
+.funding-apply ol {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.funding-card__cta {
+  display: flex;
+  align-items: center;
+}
+
+.funding-card__cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+.funding-card h3,
+.funding-apply h2 {
+  margin-bottom: 6px;
+}
+
+.funding-apply {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
+}
+
+.funding-apply > div:first-child {
+  display: grid;
+  gap: 12px;
 }
 
 .small {
