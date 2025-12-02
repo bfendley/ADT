@@ -5,121 +5,153 @@
   <title>Cozy Fireplace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, sans-serif;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
 
-    body {
-      min-height: 100vh;
-      overflow: hidden;
-      background: #000;
-    }
+  body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: #000;
+  }
 
-    /* 🔥 Full-screen fireplace video */
+  /* 🔥 Full-screen fireplace video */
+  #bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* Top genre buttons */
+  .button-row {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+  }
+
+  .pill-btn {
+    padding: 6px 18px;
+    background: white;
+    color: black;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0,0,0,0.6);
+    font-weight: 300;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+  }
+
+  .pill-btn:hover {
+    opacity: 0.8;
+  }
+
+  .pill-btn.active {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Center player (audio or iframe) */
+  .player-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 80vw;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.8);
+    z-index: 5;
+  }
+
+  .player-inner {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+  #yt-player {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .player-wrapper.hidden {
+    display: none;
+  }
+
+  /* Visibility toggle (subtle) */
+  .toggle-row {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 0.8rem;
+    color: #f5f5f5;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .toggle-row label {
+    cursor: pointer;
+  }
+
+  .toggle-row input {
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  /* 📱 Mobile tweaks */
+  @media (max-width: 768px) {
     #bg-video {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100vw;
-      min-height: 100vh;
-      width: auto;
-      height: auto;
-      object-fit: cover;
-      z-index: -1;
+      /* show more of the fire, less zoomed in */
+      object-fit: contain;
+      background-color: #000; /* black bars if needed */
     }
 
-    /* Top genre buttons */
     .button-row {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 12px;
-      z-index: 10;
+      top: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 8px;
     }
 
     .pill-btn {
-      padding: 6px 18px;
-      background: white;
-      color: black;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      border: 1px solid rgba(0,0,0,0.6);
-      font-weight: 300;
-      cursor: pointer;
-      user-select: none;
-      transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
-    }
-
-    .pill-btn:hover {
-      opacity: 0.8;
-    }
-
-    .pill-btn.active {
-      background: #000;
-      color: #fff;
-    }
-
-    /* Small YouTube player in the middle */
-    .player-wrapper {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 320px;
-      max-width: 80vw;
-      border-radius: 12px;
-      overflow: hidden;
-      background: rgba(0,0,0,0.85);
-      border: 1px solid rgba(255,255,255,0.25);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.8);
-      z-index: 5;
-    }
-
-    .player-inner {
-      aspect-ratio: 16 / 9;
-      width: 100%;
-    }
-
-    #yt-player {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-
-    .player-wrapper.hidden {
-      display: none;
-    }
-
-    /* Visibility toggle (subtle) */
-    .toggle-row {
-      position: fixed;
-      bottom: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
+      padding: 4px 14px;
       font-size: 0.8rem;
-      color: #f5f5f5;
-      background: rgba(0,0,0,0.6);
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.2);
     }
 
-    .toggle-row label {
-      cursor: pointer;
+    .player-wrapper {
+      width: 80vw;
     }
 
-    .toggle-row input {
-      vertical-align: middle;
-      margin-right: 6px;
+    .toggle-row {
+      bottom: 10px;
+      font-size: 0.75rem;
+      padding: 3px 8px;
     }
-  </style>
+  }
+</style>
+
 </head>
 <body>
   <!-- 🔥 Fireplace background -->
