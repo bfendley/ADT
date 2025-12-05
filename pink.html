@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>A Lady Named Lauren</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Cute but clean fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --pink-bg: #ff6fb5;
+      --pink-bg-dark: #e45b9e;
+      --pink-soft: #ffc7e3;
+      --white: #ffffff;
+      --text-main: #ffffff;
+      --text-dark: #222222;
+      --accent: #ffebf7;
+      --shadow-hard: 0 0 0 2px rgba(255, 255, 255, 0.25);
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #ffd1ec, #ff6fb5);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ------- Layout ------- */
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      padding: 8px 14px;
+      box-shadow: var(--shadow-hard);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, transform 0.12s;
+    }
+
+    nav button:hover {
+      background: var(--accent);
+      color: var(--pink-bg-dark);
+      transform: translateY(-1px);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    section {
+      background: var(--white);
+      color: var(--text-dark);
+      padding: 24px 22px;
+      border: 2px solid var(--pink-bg-dark);
+      box-shadow: var(--shadow-hard);
+      /* SHARP EDGES: no border radius */
+    }
+
+    section + section {
+      margin-top: 4px;
+    }
+
+    h1, h2 {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--pink-bg-dark);
+      margin-bottom: 14px;
+    }
+
+    .hero-heading {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pink-bg-dark);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .hero-sub {
+      font-weight: 400;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #444;
+      margin-bottom: 26px;
+    }
+
+    .hero-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 800px) {
+      .hero-row {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border: 2px solid var(--pink-bg-dark);
+      background: var(--pink-soft);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border: 2px solid var(--pink-bg-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.75rem;
+      padding: 10px 16px;
+      cursor: pointer;
+      background: var(--pink-bg-dark);
+      color: var(--white);
+      transition: transform 0.12s, box-shadow 0.12s, background 0.12s, color 0.12s;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--pink-bg-dark);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 0 2px var(--pink-bg-dark);
+      background: var(--pink-bg);
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-1px);
+      background: var(--pink-bg-dark);
+      color: var(--white);
+      box-shadow: 0 0 0 1px var(--pink-bg-dark);
+    }
+
+    .hero-tagline {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .hero-tagline span.mark {
+      background: #ffe8f4;
+      padding: 0 4px;
+      box-shadow: inset 0 -2px 0 var(--pink-bg-dark);
+    }
+
+    /* Right column hero */
+    .hero-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      border-left: 2px solid var(--pink-bg-dark);
+      padding-left: 16px;
+    }
+
+    .hero-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #999;
+      margin-bottom: 4px;
+    }
+
+    .hero-mood {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--pink-bg-dark);
+      min-height: 24px;
+    }
+
+    .hero-mood span {
+      display: inline-block;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .stat-box {
+      border: 2px solid var(--pink-bg-dark);
+      padding: 10px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      background: #fff7fd;
+    }
+
+    .stat-main {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--pink-bg-dark);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      color: #555;
+    }
+
+    /* -------- Sections -------- */
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .text-sm {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .list-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .list-tags span {
+      border: 2px solid var(--pink-bg-dark);
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      background: #fff7fd;
+    }
+
+    /* Playlist / cards */
+
+    .playlist {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .playlist {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .song-list {
+      border: 2px solid var(--pink-bg-dark);
+    }
+
+    .song-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      border-bottom: 2px solid var(--pink-soft);
+      cursor: pointer;
+      font-size: 0.82rem;
+    }
+
+    .song-row:last-child {
+      border-bottom: none;
+    }
+
+    .song-row:hover {
+      background: #ffe1f2;
+    }
+
+    .song-row.active {
+      background: var(--pink-bg-dark);
+      color: var(--white);
+    }
+
+    .song-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .song-title {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .song-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .song-duration {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .now-playing {
+      border: 2px solid var(--pink-bg-dark);
+      padding: 14px 14px 12px;
+      background: var(--pink-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+    }
+
+    .np-label {
+      color: #555;
+    }
+
+    .np-track {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--pink-bg-dark);
+    }
+
+    .np-detail {
+      font-size: 0.72rem;
+      color: #333;
+    }
+
+    /* Contact / socials */
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 800px) {
+      .contact-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-form {
+      border: 2px solid var(--pink-bg-dark);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #fff9fd;
+    }
+
+    label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #555;
+    }
+
+    input, textarea {
+      border: 2px solid var(--pink-bg-dark);
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      background: var(--white);
+      color: var(--text-dark);
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      box-shadow: 0 0 0 2px var(--pink-soft);
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .social-link {
+      border: 2px solid var(--pink-bg-dark);
+      padding: 8px 10px;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--pink-bg-dark);
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.12s, color 0.12s, transform 0.12s;
+    }
+
+    .social-link:hover {
+      background: var(--pink-bg-dark);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    /* JS-driven reveal */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Back to top button */
+
+    .back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 16px;
+      border: 2px solid #fff;
+      background: var(--pink-bg-dark);
+      color: #fff;
+      padding: 8px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.65rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-hard);
+      display: none;
+      z-index: 50;
+    }
+
+    .back-to-top.show {
+      display: block;
+    }
+
+    /* Tiny footer */
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: #ffe9f7;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">A LADY NAMED LAUREN</div>
+      <nav>
+        <button data-scroll="#hero">Hero</button>
+        <button data-scroll="#about">About</button>
+        <button data-scroll="#playlist">Vibes</button>
+        <button data-scroll="#contact">Contact</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="reveal">
+        <div class="hero-row">
+          <div>
+            <div class="pill-row">
+              <div class="pill">main character energy</div>
+              <div class="pill">pink but sharp</div>
+              <div class="pill">lauren-coded</div>
+            </div>
+            <div class="hero-heading" id="heroTitle">
+              A LADY <br> NAMED LAUREN
+            </div>
+            <div class="hero-sub">TIMELINE: coffee · chaos · cute outfits</div>
+            <p class="hero-tagline">
+              A portfolio-ish landing page for
+              <span class="mark">that girl</span> who answers your text,
+              finishes her to-do list, and still has time to pick the perfect
+              playlist.
+            </p>
+            <div class="hero-cta-row">
+              <button class="btn-primary" id="vibeButton">Generate today’s Lauren energy</button>
+              <button class="btn-ghost" data-scroll="#about">See the details</button>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div>
+              <div class="hero-label">Today’s Mood</div>
+              <div class="hero-mood" id="moodDisplay">Click the button &uarr;</div>
+            </div>
+
+            <div>
+              <div class="hero-label">Fast Facts</div>
+              <div class="stat-grid">
+                <div class="stat-box">
+                  <div class="stat-main" id="coffeeCount">3</div>
+                  <div class="stat-label">Coffees deep</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-main" id="playlistCount">7</div>
+                  <div class="stat-label">Playlists on loop</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-main" id="todoCount">11</div>
+                  <div class="stat-label">Tabs open</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="reveal">
+        <div class="split">
+          <div>
+            <h2>Who Is Lauren, Exactly?</h2>
+            <p class="text-sm">
+              She’s the friend who always has <strong>a plan</strong>, the coworker whose
+              Google Calendar looks like a modern art piece, and the girl who can
+              go from <strong>“hoodie and bun”</strong> to <strong>“red lipstick and blazer”</strong> in 8 minutes.
+            </p>
+            <p class="text-sm" style="margin-top: 12px;">
+              This page is her digital moodboard: a tiny corner of the internet that
+              says, “yes, I have my life together (mostly), and yes, it’s going to be
+              <strong>pink</strong> about it.”
+            </p>
+          </div>
+          <div>
+            <h2>Core Lore</h2>
+            <p class="text-sm">
+              Think of Lauren as a curated blend of:
+            </p>
+            <div class="list-tags">
+              <span>planner addict</span>
+              <span>late-night philosopher</span>
+              <span>spotify power user</span>
+              <span>rom-com historian</span>
+              <span>design snob</span>
+              <span>resting nice face</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLAYLIST / VIBES -->
+      <section id="playlist" class="reveal">
+        <h2>Lauren’s Current Vibe Board</h2>
+        <div class="playlist">
+          <div class="song-list" id="songList">
+            <!-- Songs injected by JS -->
+          </div>
+          <div>
+            <div class="now-playing">
+              <div class="np-label">Now Playing</div>
+              <div class="np-track" id="npTrack">Click a vibe on the left</div>
+              <div class="np-detail" id="npDetail">Lauren is currently deciding whether the day is “emails and iced coffee” or “ignore everything and do skincare”.</div>
+            </div>
+            <p class="text-sm" style="margin-top: 14px;">
+              Every section on this site is powered by JavaScript because Lauren refuses to be static.
+              Click around, open things, scroll fast — it’s giving interactive main character.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT / SOCIALS -->
+      <section id="contact" class="reveal">
+        <h2>Slide Into Her Inbox (Respectfully)</h2>
+        <div class="contact-row">
+          <div>
+            <form class="contact-form" id="fakeForm">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your government name (or close enough)" required>
+              </div>
+              <div>
+                <label for="reason">Why are you here?</label>
+                <input id="reason" type="text" placeholder="Coffee? Collab? Chaos?" required>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Type something iconic." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary">Send a fake message</button>
+            </form>
+          </div>
+          <div>
+            <p class="contact-note">
+              This form doesn’t actually send anywhere (JavaScript drama only),
+              but it will pop a little message and pretend it did. Because
+              sometimes delusion is a form of manifestation.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <span>instagram</span>
+                <span>@a.lady.named.lauren</span>
+              </a>
+              <a href="#" class="social-link">
+                <span>tiktok</span>
+                <span>lauren-has-entered-the-chat</span>
+              </a>
+              <a href="#" class="social-link">
+                <span>spotify</span>
+                <span>lauren’s pink noise</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Built in unapologetic pink for a lady named Lauren · JavaScript & chaos only
+      </footer>
+    </main>
+  </div>
+
+  <button class="back-to-top" id="backToTop">TOP</button>
+
+  <script>
+    // ---------- Smooth scroll for nav ----------
+    document.querySelectorAll("nav button, [data-scroll]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-scroll");
+        if (!target) return;
+        const el = document.querySelector(target);
+        if (el) {
+          window.scrollTo({
+            top: el.offsetTop - 20,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+
+    // ---------- Reveal on scroll ----------
+    const revealEls = document.querySelectorAll(".reveal");
+    function handleReveal() {
+      const trigger = window.innerHeight * 0.86;
+      revealEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < trigger) {
+          el.classList.add("visible");
+        }
+      });
+    }
+    window.addEventListener("scroll", handleReveal);
+    window.addEventListener("load", handleReveal);
+
+    // ---------- Lauren energy generator ----------
+    const vibes = [
+      "soft launch productivity, hard launch lip gloss",
+      "CEO of sending voice notes instead of texts",
+      "answering emails like it’s a personality trait",
+      "rom-com soundtrack, villain era eyeliner",
+      "hyper-focused for 20 minutes, reward for 2 hours",
+      "“I can fix it” but about spreadsheets and people",
+      "thriving, surviving, mildly over-caffeinated",
+      "doing the most and the bare minimum simultaneously",
+      "calendar full, heart fuller, storage almost full",
+      "pinterest boards organized, life... loading"
+    ];
+
+    const moodDisplay = document.getElementById("moodDisplay");
+    const vibeButton = document.getElementById("vibeButton");
+
+    function randomVibe() {
+      const pick = vibes[Math.floor(Math.random() * vibes.length)];
+      moodDisplay.innerHTML = `<span>${pick}</span>`;
+      moodDisplay.style.opacity = "0";
+      moodDisplay.style.transform = "translateY(4px)";
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          moodDisplay.style.transition = "opacity 0.2s ease-out, transform 0.2s ease-out";
+          moodDisplay.style.opacity = "1";
+          moodDisplay.style.transform = "translateY(0)";
+        });
+      });
+
+      // Also randomize "stats"
+      document.getElementById("coffeeCount").textContent = 1 + Math.floor(Math.random() * 5);
+      document.getElementById("playlistCount").textContent = 3 + Math.floor(Math.random() * 8);
+      document.getElementById("todoCount").textContent = 5 + Math.floor(Math.random() * 20);
+    }
+
+    vibeButton.addEventListener("click", randomVibe);
+
+    // ---------- Playlist / vibes list ----------
+    const songs = [
+      {
+        title: "Email & Espresso",
+        tag: "focus but cute",
+        duration: "3:21",
+        detail: "Lo-fi beats, tiny panic about the inbox, but make it aesthetic."
+      },
+      {
+        title: "Main Character Walk",
+        tag: "city strut",
+        duration: "2:47",
+        detail: "Shoes a little too loud on the sidewalk, sunglasses on, zero regrets."
+      },
+      {
+        title: "Soft Girl Study Hour",
+        tag: "pastel grind",
+        duration: "4:02",
+        detail: "Laptop stickers, highlighters, and the illusion of perfect notes."
+      },
+      {
+        title: "Get Ready & Overshare",
+        tag: "mirror talk",
+        duration: "3:59",
+        detail: "Doing makeup while telling a story with 6 tangents and no point."
+      },
+      {
+        title: "Night Drive Debrief",
+        tag: "therapy but free",
+        duration: "4:44",
+        detail: "Windows cracked, playlist too emotional for a Target parking lot."
+      }
+    ];
+
+    const songListEl = document.getElementById("songList");
+    const npTrack = document.getElementById("npTrack");
+    const npDetail = document.getElementById("npDetail");
+
+    function renderSongs() {
+      songs.forEach((song, idx) => {
+        const row = document.createElement("div");
+        row.className = "song-row";
+        row.dataset.index = idx;
+
+        row.innerHTML = `
+          <div class="song-meta">
+            <span class="song-title">${song.title}</span>
+            <span class="song-tag">${song.tag}</span>
+          </div>
+          <div class="song-duration">${song.duration}</div>
+        `;
+
+        row.addEventListener("click", () => {
+          document.querySelectorAll(".song-row").forEach(r => r.classList.remove("active"));
+          row.classList.add("active");
+          npTrack.textContent = song.title;
+          npDetail.textContent = song.detail;
+        });
+
+        songListEl.appendChild(row);
+      });
+    }
+
+    renderSongs();
+
+    // ---------- Fake form submission ----------
+    const form = document.getElementById("fakeForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim() || "Mysterious Stranger";
+      const reason = document.getElementById("reason").value.trim();
+
+      alert(
+        `Message “sent” 💌\n\n` +
+        `To: A Lady Named Lauren\n` +
+        `From: ${name}\n` +
+        (reason ? `Reason: ${reason}\n` : "") +
+        `Status: Delivered to the Vibes Queue`
+      );
+
+      form.reset();
+    });
+
+    // ---------- Back to top button ----------
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 250) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // ---------- Subtle hero title "glitch" hover ----------
+    const heroTitle = document.getElementById("heroTitle");
+    const originalTitle = heroTitle.innerHTML;
+
+    const altTitles = [
+      "LAUREN · LAUREN · LAUREN",
+      "IT GIRL IN BROWSER FORM",
+      "TAB QUEEN SUPREME",
+      "A LADY NAMED LAUREN"
+    ];
+
+    heroTitle.addEventListener("mouseenter", () => {
+      const pick = altTitles[Math.floor(Math.random() * altTitles.length)];
+      heroTitle.innerHTML = pick;
+    });
+
+    heroTitle.addEventListener("mouseleave", () => {
+      heroTitle.innerHTML = originalTitle;
+    });
+  </script>
+</body>
+</html>
